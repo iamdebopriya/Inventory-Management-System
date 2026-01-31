@@ -95,11 +95,6 @@ EXCEPTION
         RAISE NOTICE 'Transaction failed: %', SQLERRM;
 END $$;
 
-UPDATE products
-SET price = price / 1.1
-WHERE category_id = (
-    SELECT id FROM categories WHERE name = 'Electronics'
-);
 
 
 -- We do not create an index on columns like is_active (BOOLEAN)
