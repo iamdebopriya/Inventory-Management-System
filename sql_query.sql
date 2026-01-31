@@ -119,7 +119,7 @@ WHERE tablename = 'products';
 SELECT datname FROM pg_database;
 SELECT usename FROM pg_user;
 
---- Create a new database and user with specific privileges
+--- Create a new user with specific privileges
 CREATE USER inventory_user WITH PASSWORD '';
 
 GRANT CONNECT ON DATABASE inventory_db TO inventory_user;
